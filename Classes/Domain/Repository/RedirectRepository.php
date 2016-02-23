@@ -1,7 +1,6 @@
 <?php
 namespace Serfhos\MyRedirects\Domain\Repository;
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
@@ -42,6 +41,7 @@ class RedirectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
                 $newOrderings['url'] = $direction;
                 break;
             case 'destination':
+            case 'last_hit':
             case 'counter':
             case 'has_moved':
                 $newOrderings[$order] = $direction;

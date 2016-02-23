@@ -65,6 +65,11 @@ class Redirect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @var \DateTime
      */
+    protected $lastHit;
+
+    /**
+     * @var \DateTime
+     */
     protected $lastChecked;
 
     /**
@@ -330,4 +335,46 @@ class Redirect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->inactiveReason = $inactiveReason;
     }
+
+    /**
+     * Returns the LastHit
+     *
+     * @return \DateTime
+     */
+    public function getLastHit()
+    {
+        return $this->lastHit;
+    }
+
+    /**
+     * Sets the LastHit
+     *
+     * @param \DateTime $lastHit
+     * @return void
+     */
+    public function setLastHit(\DateTime $lastHit)
+    {
+        $this->lastHit = $lastHit;
+    }
+
+    /**
+     * Returns the Tstamp
+     *
+     * @return \DateTime
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * Returns the Crdate
+     *
+     * @return \DateTime
+     */
+    public function getCrdate()
+    {
+        return $this->crdate;
+    }
+
 }

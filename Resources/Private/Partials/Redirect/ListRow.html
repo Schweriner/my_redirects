@@ -50,5 +50,10 @@
         </div>
 
     </td>
-    <td class="col-redirect-hits" nowrap="nowrap">{redirect.counter}</td>
+    <td class="col-redirect-hits" nowrap="nowrap">
+        {redirect.counter}
+    </td>
+    <td class="col-redirect-last-hit-date" nowrap="nowrap">
+        <f:format.date format="{settings.dateFormat}">{redirect.lastHit}</f:format.date>
+    </td>
 </tr>
